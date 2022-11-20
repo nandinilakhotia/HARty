@@ -1,0 +1,40 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    tools:context="com.pdiot.harty.onboarding.ui.main.PlaceholderFragment">
+
+    <ImageView
+        android:id="@+id/section_img"
+        android:layout_width="303dp"
+        android:layout_height="303dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="80sp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_bluetooth_icon" />
+
+    <TextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="300sp"
+        android:text=""
+        android:textColor="@android:color/white" />
+
+</FrameLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "301692821401",
+    "project_id": "harty-2",
+    "storage_bucket": "harty-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301692821401:android:eb7fce9e1e5cc07d287d08",
+        "android_client_info": {
+          "package_name": "com.pdiot.harty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301692821401-dbdbho0q2bjnn9iqd4piljfg2bl4hvja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0lHP8_O-nbhtr4Il1rx8d_i_-ktqwbL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301692821401-dbdbho0q2bjnn9iqd4piljfg2bl4hvja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

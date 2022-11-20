@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.ProfileActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background">
+
+            <View
+                android:id="@+id/viewHeaderBackground"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp"
+                android:background="@color/teal"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="-85dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:layout_marginTop="35dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/profile_header"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintTop_toTopOf="@id/title"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="200dp"
+                app:layout_constraintStart_toStartOf="@id/profile_pic"
+                app:layout_constraintTop_toTopOf="@id/profile_pic">
+
+                <Button
+                    android:id="@+id/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOGIN" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="931dp"
+                android:layout_height="313dp"
+                android:src="@drawable/circles"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/viewHeaderBackground"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="68dp"
+                android:gravity="center"
+                android:text="Profile"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/welcomeMessageCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_16sdp"
+                app:layout_constraintBottom_toBottomOf="@id/viewHeaderBackground"
+                app:layout_constraintTop_toBottomOf="@id/viewHeaderBackground">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_14sdp">
+
+                    <TextView
+                        android:id="@+id/welcomeMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Hi, Guest!"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:padding="@dimen/_13sdp"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/welcomeMessageCard"
+                app:layout_constraintVertical_bias="1.0"
+                tools:layout_editor_absoluteX="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/appVersion">
+
+                    <TextView
+                        android:id="@+id/guestMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="To fully utilise HARty, please login!"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"/>
+
+                    <Button
+                        android:id="@+id/change_email_button"
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/ic_changeemail"
+                        android:layout_weight="1"
+                        android:text="Change Email Address" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"/>
+
+                    <Button
+                        android:id="@+id/change_password_button"
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_changepassword"
+                        android:text="     Change Password"
+                        android:textAlignment="textStart"
+                        />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"/>
+
+                    <Button
+                        android:id="@+id/view_data_button"
+                        android:layout_width="300dp"
+                        android:drawableLeft="@drawable/ic_stats"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:text="     View Weekly Data"/>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"/>
+
+                    <Button
+                        android:id="@+id/delete_account_button"
+                        android:layout_width="300dp"
+                        android:textAlignment="textStart"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_delete"
+                        android:layout_weight="1"
+
+                        android:text="     Delete Account" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
